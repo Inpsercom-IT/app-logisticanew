@@ -1,0 +1,124 @@
+<div data-role="view" data-title="View" data-layout="main" data-model="app.listaVehiculo" data-show="app.listaVehiculo.onShow" data-after-show="app.listaVehiculo.afterShow" id="listaVehiculoScreen" class="screen">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-bind="text: strings.listaVehiculo.title"></span>
+            <a data-align="right" class="fa fa-reply" href="components/home/view.html" onclick="verMenu('1')" aria-hidden="true" data-role="button"></a>
+        </div>
+    </header>
+    
+    <header data-role="header">
+        <div id="heaer_lista" style="margin-left: 30px;">
+                <div class=" w3-row w3-section">
+                    <div class="w3-text-red" style="width:50px"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
+                    <label id="lista_usuario_asignado" class="w3-text-red"></label>
+                </div>
+                <table border="0" cellspacing="0" cellpadding="0" id="tablalista" style="width:750px">
+                    <tr>
+                        <td>
+                            <p>
+                                    <label class="w3-text-red"><b>Num Orden</b></label>
+                                </p>
+                                <p>
+                                    <input id="orden" type="number" style='max-width:100px; min-width:100px; height:30px;' />
+                                </p>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td>
+                                <div class="w3-text-red"><b>Inicio</b>
+                                    <div ><input class="Fields" id="FechaInicioAE" style="width: 75%;" align="center" placeholder="Fecha Inicio" onkeyup="javascript:this.value='';"></div>
+                                </div>
+                        </td>
+                        
+                        <td>&nbsp;&nbsp;</td>
+                        <td>
+                            <div class="w3-text-red"><b>Fin</b>
+                                <div ><input id="FechaFinAE" class="Fields" align="center" placeholder="Fecha Fin" onkeyup="javascript:this.value='';"></div>
+                            </div>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td>
+                            <p>
+                                <label class="w3-text-red"><b>Estado</b></label>
+                            </p>
+                            <p>
+                                <div id="divcboEstadoAE" style='max-width:150px; min-width:150px'></div>
+                            </p>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td>
+                            <p>
+                                <label class="w3-text-red"><b>Vin</b></label>
+                            </p>
+                            <p>
+                                <input id="txtVIN" type="text" style='max-width:100px; min-width:100px; height:30px;' />
+    
+                            </p>
+
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <label class="w3-text-red"><b>Año</b></label>
+                            </p>
+                            <p>
+                                <input id="txtAnio" type="text" style='max-width:100px; min-width:100px; height:30px;' />
+                            </p>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td>
+                            <p>
+                                <label class="w3-text-red"><b>Mes</b></label>
+                            </p>
+                            <p>
+                                <div id="divcbomesAE" style='max-width:150px; min-width:150px'></div>
+                            </p>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td>
+                            <p>
+                                <label class="w3-text-red"><b>Marca</b></label>
+                            </p>
+                            <p>
+                                <div id="divcbomarcasAE" style='max-width:150px; min-width:150px'></div
+                            </p>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td>
+                            <p>
+                                <label class="w3-text-red"><b>Modelo</b></label>
+                            </p>
+                            <p>
+                                <div id="divcboModeloAE" style='max-width:150px; min-width:150px'></div>
+                            </p>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                        
+                        <td align="center">
+                            <p>
+                                <a class="w3-btn w3-red k-button primary" aria-label="Buscar" id="buscarlistasDV" onclick="buscarlistasVH(document.getElementById('txtAnio').value,document.getElementById('orden').value, document.getElementById('FechaInicioAE').value, document.getElementById('FechaFinAE').value, document.getElementById('txtVIN').value,document.getElementById('mes2AE').value,document.getElementById('marcas2AE').value,document.getElementById('modelo2AE').value,document.getElementById('estado2AE').value);">
+                                    &nbsp;<i class=" fa fa-search" aria-hidden="true">
+                                    </i>
+                                    &nbsp;
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+     </header>
+     <table align="center" width="1000px" border="0" cellspacing="0" cellpadding="0" id="tablaOTDetalleCA" style="display:block">
+        <tr>
+            <td>
+                <div id="datoslistaVH" style="font-size:11px; width:1000px"></div>
+
+            </td>
+        </tr>
+    </table>
+</div>
+     
+       <!-- START_CUSTOM_CODE_listaentrega -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+        <!-- END_CUSTOM_CODE_listaentrega -->

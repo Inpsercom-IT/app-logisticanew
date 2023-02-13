@@ -1,0 +1,1 @@
+{"plugins":["cordova-plugin-whitelist","cordova-plugin-file","cordova-plugin-compat","cordova-plugin-file-transfer","cordova-plugin-camera","cordova-plugin-splashscreen","cordova-plugin-printer","phonegap-plugin-barcodescanner","cordova-plugin-barcodescanner","cordova-plugin-media-capture","cordova-plugin-ftp","cordova-plugin-android-permissions"]}
